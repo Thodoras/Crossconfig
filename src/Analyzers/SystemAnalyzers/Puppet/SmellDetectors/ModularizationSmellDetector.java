@@ -1,5 +1,6 @@
 package Analyzers.SystemAnalyzers.Puppet.SmellDetectors;
 
+import Analyzers.SystemAnalyzers.Puppet.PuppetSmellConstants;
 import Models.Puppet.PuppetFile;
 
 public class ModularizationSmellDetector extends SmellDetector {
@@ -26,8 +27,8 @@ public class ModularizationSmellDetector extends SmellDetector {
 	}
 	
 	private Boolean isInsufficientModularizationForm1() {
-		return getCurrentPuppetFile().getClasses().size() > 1 ||
-			   getCurrentPuppetFile().getDefines().size() > 1;
+		return getCurrentPuppetFile().getClasses().size() > PuppetSmellConstants.MODULE_CARDINALITY_THRESHOLD ||
+			   getCurrentPuppetFile().getDefines().size() > PuppetSmellConstants.MODULE_CARDINALITY_THRESHOLD;
 	}
 
 }
