@@ -7,6 +7,7 @@ import Parsers.PuppetParsers.PuppetFileExtractor;
 
 public class CrossconfigMain {
 	public static void main(String[] args) {
+		// Input repository path
 		PuppetAnalyzer puppetAnalyzer = new PuppetAnalyzer("/home/thodoras/Documents/PhD/CROSSMINER/Crossminer-Tests");
 		puppetAnalyzer.detectConfigurationCodeSmells();
 	}
