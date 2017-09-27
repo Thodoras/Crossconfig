@@ -32,7 +32,8 @@ public class AbstractionSmellDetector extends SmellDetector {
 				System.out.println(
 						"Unnecessary '" + resourceName.name().toLowerCase() + "' abstraction detected in " +
  						"File: " + getCurrentPuppetFile().getFilePath() + "/" + getCurrentPuppetFile().getFileName() +
-						" line: " + resource.getLine());
+						" line: " + resource.getLine()
+				);
 			}
 		}
 	}
